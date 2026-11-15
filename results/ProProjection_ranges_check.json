@@ -1,0 +1,24 @@
+{
+ "refit_vs_released_largest_gap": 0.003,
+ "windows": [
+  [
+   2014,
+   2016
+  ],
+  [
+   2017,
+   2018
+  ],
+  [
+   2021,
+   2022
+  ]
+ ],
+ "players_scored": 2708,
+ "widening_log_units": {
+  "least senior evidence": 0.0,
+  "middle evidence": 0.214,
+  "most evidence": 0.233,
+  "no senior minutes in two years": 0.0
+ }
+}

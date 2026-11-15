@@ -1,0 +1,133 @@
+{
+ "player_seasons": 32445,
+ "skills_shown": [
+  "Wins his headers",
+  "Beats his man",
+  "Quality of the chances he creates",
+  "Gets into scoring positions",
+  "Moves the ball into the final third",
+  "Arrives in the box",
+  "Wins the ball back",
+  "Draws fouls",
+  "Secure passer",
+  "Crosses",
+  "Involvement"
+ ],
+ "skills_hidden": [
+  "Aerial duel success",
+  "Creates chances",
+  "Reads the game",
+  "Long-range passing"
+ ],
+ "gate_t4": {
+  "rule": "a skill is shown when, after shrinkage, odd-match residuals predict even-match residuals (Spearman >= 0.5, player-seasons of 1,800+ minutes)",
+  "skills_passed": 11
+ },
+ "by_skill": {
+  "aerial_won": {
+   "label": "Wins his headers",
+   "k_minutes": 600,
+   "split_half_spearman": 0.688,
+   "pairs": 16708,
+   "passed": true
+  },
+  "aerial_rate": {
+   "label": "Aerial duel success",
+   "k_minutes": 2500,
+   "split_half_spearman": 0.382,
+   "pairs": 16606,
+   "passed": false
+  },
+  "drib_succ": {
+   "label": "Beats his man",
+   "k_minutes": 600,
+   "split_half_spearman": 0.608,
+   "pairs": 16708,
+   "passed": true
+  },
+  "chances": {
+   "label": "Creates chances",
+   "k_minutes": 900,
+   "split_half_spearman": 0.492,
+   "pairs": 16708,
+   "passed": false
+  },
+  "xa": {
+   "label": "Quality of the chances he creates",
+   "k_minutes": 900,
+   "split_half_spearman": 0.577,
+   "pairs": 16708,
+   "passed": true
+  },
+  "xg": {
+   "label": "Gets into scoring positions",
+   "k_minutes": 1500,
+   "split_half_spearman": 0.55,
+   "pairs": 16708,
+   "passed": true
+  },
+  "final_third": {
+   "label": "Moves the ball into the final third",
+   "k_minutes": 300,
+   "split_half_spearman": 0.782,
+   "pairs": 16708,
+   "passed": true
+  },
+  "box": {
+   "label": "Arrives in the box",
+   "k_minutes": 600,
+   "split_half_spearman": 0.69,
+   "pairs": 16708,
+   "passed": true
+  },
+  "interceptions": {
+   "label": "Reads the game",
+   "k_minutes": 1500,
+   "split_half_spearman": 0.47,
+   "pairs": 16708,
+   "passed": false
+  },
+  "ball_winning": {
+   "label": "Wins the ball back",
+   "k_minutes": 300,
+   "split_half_spearman": 0.716,
+   "pairs": 16708,
+   "passed": true
+  },
+  "fouled": {
+   "label": "Draws fouls",
+   "k_minutes": 600,
+   "split_half_spearman": 0.648,
+   "pairs": 16708,
+   "passed": true
+  },
+  "pass_acc": {
+   "label": "Secure passer",
+   "k_minutes": 300,
+   "split_half_spearman": 0.724,
+   "pairs": 16708,
+   "passed": true
+  },
+  "long_acc": {
+   "label": "Long-range passing",
+   "k_minutes": 1500,
+   "split_half_spearman": 0.444,
+   "pairs": 16693,
+   "passed": false
+  },
+  "crosses": {
+   "label": "Crosses",
+   "k_minutes": 150,
+   "split_half_spearman": 0.868,
+   "pairs": 16708,
+   "passed": true
+  },
+  "touches": {
+   "label": "Involvement",
+   "k_minutes": 300,
+   "split_half_spearman": 0.776,
+   "pairs": 16708,
+   "passed": true
+  }
+ }
+}

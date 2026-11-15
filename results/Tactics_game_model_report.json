@@ -1,0 +1,143 @@
+{
+ "team_matches": 81018,
+ "league_team_matches": 73632,
+ "team_seasons": 2433,
+ "shrinkage_k": {
+  "possession": 2.06,
+  "combination": 0.66,
+  "directness": 1.59,
+  "progression": 1.83,
+  "width": 17.76,
+  "dribbling": 3.27,
+  "box_presence": 4.99,
+  "pressing": 6.16,
+  "ball_winning": 3.64,
+  "aerial_play": 3.82,
+  "chance_quality": 7.71,
+  "counter": 5.74,
+  "set_pieces": 6.56,
+  "back_three": 0.87,
+  "two_up_front": 1.6
+ },
+ "reliability": {
+  "team_seasons": 1966,
+  "spearman_odd_even": {
+   "possession": 0.844,
+   "combination": 0.881,
+   "directness": 0.896,
+   "progression": 0.897,
+   "width": 0.635,
+   "dribbling": 0.717,
+   "box_presence": 0.612,
+   "pressing": 0.511,
+   "ball_winning": 0.719,
+   "aerial_play": 0.81,
+   "chance_quality": 0.408,
+   "counter": 0.188,
+   "set_pieces": 0.411,
+   "back_three": 0.967,
+   "two_up_front": 0.926
+  }
+ },
+ "dimensions_passed": [
+  "possession",
+  "combination",
+  "directness",
+  "progression",
+  "width",
+  "dribbling",
+  "box_presence",
+  "ball_winning",
+  "aerial_play",
+  "back_three",
+  "two_up_front"
+ ],
+ "dimensions_failed": [
+  "pressing",
+  "chance_quality",
+  "counter",
+  "set_pieces"
+ ],
+ "gate_t1": {
+  "rule": "each dimension: odd vs even matches agree, Spearman >= 0.6 (team-seasons with 20+ matches)",
+  "passed": true
+ },
+ "archetypes": {
+  "k": 5,
+  "silhouette": 0.12,
+  "centres": {
+   "0": {
+    "possession": -0.71,
+    "combination": -0.48,
+    "directness": 0.54,
+    "progression": 0.15,
+    "width": -0.15,
+    "dribbling": 0.06,
+    "box_presence": -0.74,
+    "ball_winning": -0.78,
+    "aerial_play": 0.13,
+    "back_three": 0.09,
+    "two_up_front": -0.08
+   },
+   "1": {
+    "possession": 0.33,
+    "combination": 0.52,
+    "directness": -0.46,
+    "progression": -0.49,
+    "width": 0.04,
+    "dribbling": -0.46,
+    "box_presence": -0.14,
+    "ball_winning": 0.17,
+    "aerial_play": -0.34,
+    "back_three": 0.84,
+    "two_up_front": 0.69
+   },
+   "2": {
+    "possession": 1.42,
+    "combination": 1.38,
+    "directness": -1.31,
+    "progression": -1.03,
+    "width": -0.51,
+    "dribbling": -0.14,
+    "box_presence": 0.4,
+    "ball_winning": 1.13,
+    "aerial_play": -1.1,
+    "back_three": -0.59,
+    "two_up_front": -0.54
+   },
+   "3": {
+    "possession": 0.23,
+    "combination": 0.06,
+    "directness": -0.21,
+    "progression": -0.15,
+    "width": 0.47,
+    "dribbling": 0.11,
+    "box_presence": 0.35,
+    "ball_winning": 0.26,
+    "aerial_play": 0.04,
+    "back_three": -0.57,
+    "two_up_front": -0.41
+   },
+   "4": {
+    "possession": -0.99,
+    "combination": -1.18,
+    "directness": 1.19,
+    "progression": 1.37,
+    "width": 0.01,
+    "dribbling": 0.3,
+    "box_presence": 0.22,
+    "ball_winning": -0.54,
+    "aerial_play": 1.08,
+    "back_three": 0.45,
+    "two_up_front": 0.56
+   }
+  },
+  "sizes": {
+   "0": 571,
+   "1": 389,
+   "2": 418,
+   "3": 598,
+   "4": 457
+  }
+ }
+}

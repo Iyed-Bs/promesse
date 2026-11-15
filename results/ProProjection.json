@@ -1,0 +1,87 @@
+{
+ "version": "ProProjection",
+ "fit": [
+  2014,
+  2018
+ ],
+ "calibrate": [
+  2019,
+  2020
+ ],
+ "test": [
+  2021,
+  2022
+ ],
+ "t3_opened": false,
+ "coverage_80": {
+  "raw": 0.791,
+  "calibrated": 0.803
+ },
+ "by_tier": {
+  "least senior evidence": {
+   "n": 902,
+   "raw_80": 0.805,
+   "calibrated_80": 0.813,
+   "interval_95": [
+    0.786,
+    0.837
+   ],
+   "width": 6.18,
+   "plays_predicted": 0.474,
+   "best_achievable": 0.803,
+   "plays_observed": 0.447,
+   "ok": true
+  },
+  "middle evidence": {
+   "n": 681,
+   "raw_80": 0.775,
+   "calibrated_80": 0.809,
+   "interval_95": [
+    0.778,
+    0.837
+   ],
+   "width": 7.2,
+   "plays_predicted": 0.673,
+   "best_achievable": 0.8,
+   "plays_observed": 0.62,
+   "ok": true
+  },
+  "most evidence": {
+   "n": 586,
+   "raw_80": 0.672,
+   "calibrated_80": 0.794,
+   "interval_95": [
+    0.759,
+    0.824
+   ],
+   "width": 3.87,
+   "plays_predicted": 0.913,
+   "best_achievable": 0.8,
+   "plays_observed": 0.915,
+   "ok": true
+  },
+  "no senior minutes in two years": {
+   "n": 6147,
+   "raw_80": 0.802,
+   "calibrated_80": 0.802,
+   "interval_95": [
+    0.792,
+    0.811
+   ],
+   "width": 5.39,
+   "plays_predicted": 0.319,
+   "best_achievable": 0.804,
+   "plays_observed": 0.324,
+   "ok": true
+  }
+ },
+ "mean_pinball": {
+  "hurdle": 0.6044,
+  "ProProjection 0.2": 0.5805
+ },
+ "plays_brier": 0.2066,
+ "gate_phase6": {
+  "rule": "tiers of 500+ players hold 77-83 %; a smaller tier's 95 % interval contains 80 %",
+  "passed": true
+ }
+}

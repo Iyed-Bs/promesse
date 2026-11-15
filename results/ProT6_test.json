@@ -1,0 +1,30 @@
+{
+ "n_train": 3177,
+ "n_test": 966,
+ "mse": {
+  "baseline": 6.8979,
+  "+ game model": 6.8941,
+  "+ coach": 6.8898
+ },
+ "gain_game_model": {
+  "mean": 0.0038,
+  "ci": [
+   -0.0656,
+   0.076
+  ],
+  "level": 0.95,
+  "relative": 0.0005,
+  "n": 966
+ },
+ "gain_coach": {
+  "mean": 0.0043,
+  "ci": [
+   -0.0434,
+   0.0517
+  ],
+  "level": 0.95,
+  "relative": 0.0006,
+  "n": 966
+ },
+ "version": "ProT6"
+}

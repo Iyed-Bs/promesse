@@ -1,0 +1,78 @@
+{
+ "player_seasons": 29799,
+ "shown": [
+  "Vision",
+  "Composure",
+  "Discipline"
+ ],
+ "hidden": [
+  "Concentration",
+  "Consistency",
+  "Big games"
+ ],
+ "gate": "an attribute is shown when a player's odd matches predict his even ones (Spearman >= 0.5, player-seasons of 1,800+ minutes); keepers are read apart",
+ "not_readable": {
+  "field of view and scanning": "needs video or tracking (head movements before receiving)",
+  "decision speed": "needs event timing",
+  "pace and work rate": "tracking is published only for the Premier League and the Champions League from 2024/25: a club's own tracking would add it"
+ },
+ "as_first_written": {
+  "vision": 0.563,
+  "composure": 0.388,
+  "discipline": 0.395,
+  "note": "rare events left out after seeing these (see the module's docstring)"
+ },
+ "by_attribute": {
+  "vision": {
+   "label": "Vision",
+   "reads": "what his passing finds for its volume (xA, chances, final-third passes per pass), beyond set-piece duty",
+   "k_minutes": 900,
+   "split_half_spearman": 0.551,
+   "pairs": 14991,
+   "passed": true,
+   "discrimination": 0.713
+  },
+  "composure": {
+   "label": "Composure",
+   "reads": "keeps the ball when it's on him: how rarely he's dispossessed per touch, for how often he takes players on",
+   "k_minutes": 900,
+   "split_half_spearman": 0.507,
+   "pairs": 14991,
+   "passed": true,
+   "discrimination": 0.708
+  },
+  "concentration": {
+   "label": "Concentration",
+   "reads": "lapses per 90: errors leading to a goal, penalties conceded, own goals",
+   "k_minutes": 4000,
+   "split_half_spearman": 0.142,
+   "pairs": 14991,
+   "passed": false,
+   "discrimination": 0.076
+  },
+  "discipline": {
+   "label": "Discipline",
+   "reads": "how rarely he fouls, per 90 (cards aren't in these data)",
+   "k_minutes": 900,
+   "split_half_spearman": 0.571,
+   "pairs": 14991,
+   "passed": true,
+   "discrimination": 0.753
+  },
+  "consistency": {
+   "label": "Consistency",
+   "reads": "how little his match-by-match output swings (matches of 60+ minutes)",
+   "split_half_spearman": 0.207,
+   "pairs": 19057,
+   "passed": false
+  },
+  "big_games": {
+   "label": "Big games",
+   "reads": "his output against the top quarter of his league, minus against the rest",
+   "split_half_spearman": 0.055,
+   "pairs": 1364,
+   "passed": false
+  }
+ },
+ "discrimination_rule": "Franks et al. 2016: share of the spread between players that is the players (bootstrap of each player's matches, 60 draws, player-seasons of 1,800+ minutes); shown only if >= 0.5"
+}

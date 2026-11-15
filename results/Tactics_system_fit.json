@@ -1,0 +1,235 @@
+{
+ "moves": {
+  "train": 2134,
+  "test": 1080,
+  "locked_into_2025_26": 1115
+ },
+ "skills": [
+  "aerial_won",
+  "drib_succ",
+  "xa",
+  "xg",
+  "final_third",
+  "box",
+  "ball_winning",
+  "fouled",
+  "pass_acc",
+  "crosses",
+  "touches"
+ ],
+ "mse_test": {
+  "model": 0.6503,
+  "same as before": 0.974,
+  "his family at the new team": 1.0909,
+  "regression to the mean": 0.6889
+ },
+ "gain_over": {
+  "same as before": {
+   "mean": 0.3236,
+   "ci95": [
+    0.2841,
+    0.3711
+   ]
+  },
+  "his family at the new team": {
+   "mean": 0.4406,
+   "ci95": [
+    0.3927,
+    0.489
+   ]
+  },
+  "regression to the mean": {
+   "mean": 0.0386,
+   "ci95": [
+    0.0272,
+    0.0496
+   ]
+  }
+ },
+ "gate_t5": {
+  "rule": "the model's error on unseen moves (into 2024/25) beats both baselines, 95 % interval of the gain above zero",
+  "passed": true
+ },
+ "systems_add_beyond_shrinkage": {
+  "rule": "the model beats the same model without the game models (regression to the mean), 95 % interval above zero",
+  "passed": true
+ },
+ "what_carries": {
+  "aerial_won": {
+   "carry_over": 0.621,
+   "style_effects": {
+    "possession": -0.027,
+    "combination": 0.022,
+    "directness": -0.032,
+    "progression": 0.009,
+    "width": 0.004,
+    "dribbling": 0.005,
+    "box_presence": 0.032,
+    "ball_winning": 0.027,
+    "aerial_play": 0.096,
+    "back_three": -0.007,
+    "two_up_front": -0.019
+   }
+  },
+  "drib_succ": {
+   "carry_over": 0.509,
+   "style_effects": {
+    "possession": -0.008,
+    "combination": 0.035,
+    "directness": 0.04,
+    "progression": 0.003,
+    "width": 0.022,
+    "dribbling": 0.021,
+    "box_presence": -0.033,
+    "ball_winning": 0.071,
+    "aerial_play": -0.006,
+    "back_three": 0.014,
+    "two_up_front": 0.025
+   }
+  },
+  "xa": {
+   "carry_over": 0.529,
+   "style_effects": {
+    "possession": 0.011,
+    "combination": 0.013,
+    "directness": 0.032,
+    "progression": 0.006,
+    "width": 0.004,
+    "dribbling": -0.02,
+    "box_presence": 0.011,
+    "ball_winning": 0.028,
+    "aerial_play": -0.017,
+    "back_three": -0.0,
+    "two_up_front": 0.021
+   }
+  },
+  "xg": {
+   "carry_over": 0.459,
+   "style_effects": {
+    "possession": -0.027,
+    "combination": -0.037,
+    "directness": 0.054,
+    "progression": -0.089,
+    "width": 0.002,
+    "dribbling": -0.007,
+    "box_presence": 0.043,
+    "ball_winning": 0.053,
+    "aerial_play": -0.021,
+    "back_three": -0.027,
+    "two_up_front": -0.014
+   }
+  },
+  "final_third": {
+   "carry_over": 0.511,
+   "style_effects": {
+    "possession": -0.004,
+    "combination": 0.052,
+    "directness": -0.058,
+    "progression": 0.125,
+    "width": -0.025,
+    "dribbling": -0.002,
+    "box_presence": 0.011,
+    "ball_winning": 0.084,
+    "aerial_play": 0.048,
+    "back_three": 0.039,
+    "two_up_front": 0.023
+   }
+  },
+  "box": {
+   "carry_over": 0.424,
+   "style_effects": {
+    "possession": 0.047,
+    "combination": 0.016,
+    "directness": -0.047,
+    "progression": 0.044,
+    "width": 0.03,
+    "dribbling": -0.014,
+    "box_presence": 0.143,
+    "ball_winning": 0.052,
+    "aerial_play": -0.027,
+    "back_three": -0.015,
+    "two_up_front": -0.008
+   }
+  },
+  "ball_winning": {
+   "carry_over": 0.484,
+   "style_effects": {
+    "possession": -0.185,
+    "combination": -0.016,
+    "directness": -0.019,
+    "progression": -0.089,
+    "width": -0.02,
+    "dribbling": -0.013,
+    "box_presence": 0.013,
+    "ball_winning": 0.16,
+    "aerial_play": 0.113,
+    "back_three": 0.067,
+    "two_up_front": 0.02
+   }
+  },
+  "fouled": {
+   "carry_over": 0.632,
+   "style_effects": {
+    "possession": -0.008,
+    "combination": -0.027,
+    "directness": 0.007,
+    "progression": -0.046,
+    "width": 0.014,
+    "dribbling": -0.02,
+    "box_presence": 0.003,
+    "ball_winning": 0.045,
+    "aerial_play": 0.004,
+    "back_three": -0.003,
+    "two_up_front": -0.001
+   }
+  },
+  "pass_acc": {
+   "carry_over": 0.679,
+   "style_effects": {
+    "possession": 0.177,
+    "combination": 0.073,
+    "directness": -0.02,
+    "progression": -0.054,
+    "width": -0.001,
+    "dribbling": 0.004,
+    "box_presence": -0.004,
+    "ball_winning": -0.063,
+    "aerial_play": -0.083,
+    "back_three": -0.018,
+    "two_up_front": 0.036
+   }
+  },
+  "crosses": {
+   "carry_over": 0.554,
+   "style_effects": {
+    "possession": -0.06,
+    "combination": 0.041,
+    "directness": -0.116,
+    "progression": 0.124,
+    "width": 0.085,
+    "dribbling": 0.002,
+    "box_presence": -0.002,
+    "ball_winning": 0.044,
+    "aerial_play": 0.018,
+    "back_three": 0.051,
+    "two_up_front": 0.032
+   }
+  },
+  "touches": {
+   "carry_over": 0.563,
+   "style_effects": {
+    "possession": 0.091,
+    "combination": 0.038,
+    "directness": -0.046,
+    "progression": -0.065,
+    "width": -0.026,
+    "dribbling": -0.019,
+    "box_presence": 0.002,
+    "ball_winning": 0.083,
+    "aerial_play": 0.007,
+    "back_three": 0.04,
+    "two_up_front": 0.031
+   }
+  }
+ }
+}

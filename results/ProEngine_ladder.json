@@ -1,0 +1,263 @@
+{
+ "target": "y_reg3",
+ "population": "under 21 at the snapshot",
+ "features": [
+  "age",
+  "birth_quarter",
+  "height",
+  "left_foot",
+  "min_365",
+  "min_730",
+  "qmin_365",
+  "qmin_730",
+  "league_min_365",
+  "europe_min_730",
+  "apps_365",
+  "age_first_app",
+  "last_club_level",
+  "last_share",
+  "last_level",
+  "best_share",
+  "best_level",
+  "clubs_2y",
+  "fm_min_365",
+  "fm_youth_min_365",
+  "qmin_cum",
+  "seasons_senior",
+  "growth_q",
+  "share_trend",
+  "level_step",
+  "cohort_pct",
+  "yt_selected",
+  "yt_squads",
+  "yt_top_level",
+  "pos_GK",
+  "pos_DEF",
+  "pos_MID",
+  "pos_ATT"
+ ],
+ "benchmarks": [
+  "mv_last",
+  "mv_days",
+  "mv_max",
+  "mv_1y",
+  "mv_growth",
+  "game_overall",
+  "game_potential",
+  "game_gap",
+  "game_b_mean",
+  "fm_rating_365"
+ ],
+ "inputs_rule": "engines read what happened only; raters are benchmarks (models/inputs.py, 2026)",
+ "settings_chosen_on_T1": {
+  "C": 0.03,
+  "leaves": 15,
+  "rounds": 129
+ },
+ "T1 (validation)": {
+  "train": "2014-2018",
+  "test": "2019-2020",
+  "n_train": 15896,
+  "n_test": 7032,
+  "base_rate_test": 0.1372,
+  "rungs": {
+   "0. base rate": {
+    "auc": 0.5,
+    "brier": 0.1184,
+    "logloss": 0.4001,
+    "ece": 0.0068
+   },
+   "1a. benchmark: market value": {
+    "auc": 0.7697,
+    "brier": 0.1019,
+    "logloss": 0.3417,
+    "ece": 0.0257
+   },
+   "1b. benchmark: game ratings": {
+    "auc": 0.7008,
+    "brier": 0.1027,
+    "logloss": 0.3527,
+    "ece": 0.0271
+   },
+   "1c. benchmark: every rater together": {
+    "auc": 0.7734,
+    "brier": 0.1022,
+    "logloss": 0.3417,
+    "ece": 0.028
+   },
+   "2. penalised logistic": {
+    "auc": 0.7675,
+    "brier": 0.0955,
+    "logloss": 0.3285,
+    "ece": 0.0104
+   },
+   "3. gradient boosting": {
+    "auc": 0.7666,
+    "brier": 0.0957,
+    "logloss": 0.3288,
+    "ece": 0.0126
+   },
+   "6. ablation: gradient boosting + raters": {
+    "auc": 0.8027,
+    "brier": 0.0931,
+    "logloss": 0.3162,
+    "ece": 0.0101
+   }
+  },
+  "gbm_minus_market_value_auc": {
+   "mean": -0.003,
+   "ci95": [
+    -0.0216,
+    0.016
+   ]
+  },
+  "gbm_minus_logistic_auc": {
+   "mean": -0.0009,
+   "ci95": [
+    -0.0088,
+    0.0068
+   ]
+  },
+  "top_features_gbm": {
+   "cohort_pct": 9100.9,
+   "qmin_730": 7370.7,
+   "qmin_365": 3492.0,
+   "qmin_cum": 2432.6,
+   "height": 2431.9,
+   "last_level": 1851.3,
+   "apps_365": 1504.7,
+   "best_share": 1497.5,
+   "age": 1423.1,
+   "last_club_level": 1417.8,
+   "age_first_app": 1266.9,
+   "yt_selected": 1166.6
+  }
+ },
+ "T2 (test)": {
+  "train": "2014-2020",
+  "test": "2021-2022",
+  "n_train": 22928,
+  "n_test": 8316,
+  "base_rate_test": 0.1273,
+  "rungs": {
+   "0. base rate": {
+    "auc": 0.5,
+    "brier": 0.1113,
+    "logloss": 0.3822,
+    "ece": 0.0146
+   },
+   "1a. benchmark: market value": {
+    "auc": 0.7753,
+    "brier": 0.0966,
+    "logloss": 0.3266,
+    "ece": 0.0311
+   },
+   "1b. benchmark: game ratings": {
+    "auc": 0.7025,
+    "brier": 0.098,
+    "logloss": 0.3392,
+    "ece": 0.0206
+   },
+   "1c. benchmark: every rater together": {
+    "auc": 0.7735,
+    "brier": 0.0964,
+    "logloss": 0.3258,
+    "ece": 0.027
+   },
+   "2. penalised logistic": {
+    "auc": 0.7437,
+    "brier": 0.0937,
+    "logloss": 0.3244,
+    "ece": 0.0069
+   },
+   "3. gradient boosting": {
+    "auc": 0.7484,
+    "brier": 0.0932,
+    "logloss": 0.3226,
+    "ece": 0.0088
+   },
+   "6. ablation: gradient boosting + raters": {
+    "auc": 0.8047,
+    "brier": 0.0893,
+    "logloss": 0.3043,
+    "ece": 0.0127
+   }
+  },
+  "gbm_minus_market_value_auc": {
+   "mean": -0.027,
+   "ci95": [
+    -0.0459,
+    -0.0067
+   ]
+  },
+  "gbm_minus_logistic_auc": {
+   "mean": 0.0048,
+   "ci95": [
+    -0.0015,
+    0.0116
+   ]
+  },
+  "top_features_gbm": {
+   "cohort_pct": 14873.7,
+   "qmin_365": 10243.5,
+   "qmin_730": 7693.8,
+   "height": 2577.2,
+   "last_level": 2376.7,
+   "yt_selected": 1855.4,
+   "min_365": 1815.9,
+   "best_share": 1359.0,
+   "apps_365": 1265.7,
+   "last_share": 1258.5,
+   "age": 1169.5,
+   "age_first_app": 992.8
+  }
+ },
+ "gate_phase4": {
+  "rule": "Promesse's engine (chosen on T1) beats the strongest benchmark on T2 (95 % interval above zero)",
+  "engine": "2. penalised logistic",
+  "benchmark": "1a. benchmark: market value",
+  "mean": -0.0319,
+  "ci95": [
+   -0.0511,
+   -0.0101
+  ],
+  "passed": false
+ },
+ "ablation_raters": {
+  "what": "gradient boosting + raters minus gradient boosting, T2 AUC: what the raters' opinions add",
+  "mean": 0.0563,
+  "ci95": [
+   0.04,
+   0.0722
+  ]
+ },
+ "promesse_adds_to_market": {
+  "what": "T2 AUC differences with 95 % bootstrap intervals over players (1000 resamples, seed 7). The engine + raters model is an ablation, never shipped: it says what public match records add once what the raters know is in. The Phase 4 gate (engine alone vs the strongest benchmark) is unchanged and reported as not passed.",
+  "t2_auc": {
+   "engine_plus_raters": 0.8047,
+   "market_value": 0.7753,
+   "every_rater_together": 0.7735,
+   "engine_gbm": 0.7484
+  },
+  "n_test": 8316,
+  "n_players": 6016,
+  "engine_plus_raters_minus_market_value": {
+   "point": 0.0294,
+   "boot_mean": 0.0293,
+   "ci95": [
+    0.0216,
+    0.0366
+   ],
+   "excludes_zero": true
+  },
+  "engine_plus_raters_minus_every_rater": {
+   "point": 0.0312,
+   "boot_mean": 0.0311,
+   "ci95": [
+    0.0235,
+    0.0389
+   ],
+   "excludes_zero": true
+  }
+ }
+}

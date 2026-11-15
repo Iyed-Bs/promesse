@@ -1,0 +1,46 @@
+{
+ "criteria": {
+  "full_season_minutes_with_stats": 900,
+  "min_full_seasons": 2,
+  "young_age": 21,
+  "period": "2021/22 to 2025/26"
+ },
+ "measured_30_oct": {
+  "players": 8053,
+  "young": 2642
+ },
+ "reproduction": {
+  "split-year seasons only": {
+   "players": 8053,
+   "young": 2641,
+   "players_off_pct": 0.0,
+   "young_off_pct": -0.04,
+   "reproduces": true
+  },
+  "with calendar-year leagues": {
+   "players": 8690,
+   "young": 2884,
+   "players_off_pct": 7.91,
+   "young_off_pct": 9.16,
+   "reproduces": false
+  }
+ },
+ "gate": "passed: criterion 1 reproduces the earlier measurement within 2 %",
+ "reading_used": "split-year seasons only",
+ "upper_stand": {
+  "players": 7053,
+  "young": 2331,
+  "with_three_or_more": 4632
+ },
+ "removed_by": {
+  "no identity link with an exact birth date": 995,
+  "held back: identity conflict under review": 5
+ },
+ "with_one_full_season": 4569,
+ "reviewed": "not yet: the 100-player review is a reading task",
+ "explained": [
+  "Young is read at his first season of the period, as the earlier count was; at his first full season it would be 2,316.",
+  "Calendar-year leagues (Brazil, the MLS, Scandinavia...) are outside the measured reading; counting them would add 637 players before the identity filter, a widening for a later version."
+ ],
+ "written": "lake/gold/stands.parquet: one row per MatchData player with a full season; everyone else is in the lower stand"
+}

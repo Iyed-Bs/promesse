@@ -1,0 +1,13 @@
+duckdb
+pandas
+pyarrow
+numpy
+scipy
+scikit-learn
+lightgbm
+statsmodels
+unidecode
+fastapi
+uvicorn[standard]
+requests>=2.31
+rapidfuzz

@@ -1,0 +1,38 @@
+{
+ "about": "Promesse's simulator (version B,): the variables only a club holds, each with the effect it starts from. Effects are odds ratios per standard deviation, applied on top of the public-data call (version A) as log-odds; every one can be overridden. Labelled a simulation everywhere it shows: nothing here was learned from a club's data.",
+ "engine_inputs": [
+  {"input": "fm_youth_min_365", "label": "Youth-competition minutes, last 12 months", "unit": "minutes", "min": 0, "max": 3500, "step": 50,
+   "why": "The engine already weighs this input; public data sees only the youth competitions with detailed stats (the Youth League, England's PL2...), a club sees every one (División de Honor Juvenil, its B team's league). The engine's own learned coefficient applies."},
+  {"input": "height", "label": "Height", "unit": "cm", "min": 160, "max": 200, "step": 1,
+   "why": "Often missing for young players in public data; a club measures it. The engine's own learned coefficient applies."}
+ ],
+ "club_measures": [
+  {"key": "sprint", "label": "Sprint (20 m), against his age group", "or_per_sd": 1.36, "status": "study",
+   "source": "Höner et al. 2021, Frontiers in Sports and Active Living 3:638227, Table 4 (U15, combined model)"},
+  {"key": "tactical", "label": "Tactical skills (coach's rating)", "or_per_sd": 2.09, "status": "study",
+   "source": "Höner et al. 2021, Table 4 (U15, combined model)"},
+  {"key": "dribbling", "label": "Dribbling test", "or_per_sd": 1.53, "status": "study",
+   "source": "Höner et al. 2021, Table 4 (U15, combined model)"},
+  {"key": "kicking", "label": "Kicking skills (coach's rating)", "or_per_sd": 1.0, "status": "no clear effect at 15",
+   "source": "Höner et al. 2021, Table 4: 1.36 at U14, not significant at U15"},
+  {"key": "psychosocial", "label": "Psychosocial skills (coach's rating)", "or_per_sd": 1.0, "status": "no clear effect at 15",
+   "source": "Höner et al. 2021, Table 4: 0.85 at U12, not significant at U15"},
+  {"key": "endurance", "label": "Endurance", "or_per_sd": 1.0, "status": "no clear effect at 15",
+   "source": "Höner et al. 2021, Table 4: not significant at U15"},
+  {"key": "maturation", "label": "Biological maturity (late to early, against his age)", "or_per_sd": 1.0, "status": "your data would measure this",
+   "source": "A 14-year follow-up of 47 players of one top academy (2025) found late maturers more likely to turn professional; too small to set a number"},
+  {"key": "practice", "label": "Football practice and play hours in childhood", "or_per_sd": 1.0, "status": "your data would measure this",
+   "source": "Ford & Williams 2011 (32 English academy players): those who turned professional had played and practised more; no effect size to carry over"},
+  {"key": "mindset", "label": "Hope for success against fear of failure", "or_per_sd": 1.0, "status": "your data would measure this",
+   "source": "Wachsmuth, Feichtinger, Bartley & Höner 2023: both predicted professional status from U17; effect sizes not carried over here"},
+  {"key": "injury", "label": "Days lost to injury, last 12 months", "or_per_sd": 1.0, "status": "your data would measure this",
+   "source": "No study found with an effect on reaching a senior first team; the medical record is the club's"},
+  {"key": "load", "label": "Training load tolerated", "or_per_sd": 1.0, "status": "your data would measure this",
+   "source": "No study found with an effect on reaching a senior first team"}
+ ],
+ "caveats": [
+  "The study effects were measured on a different outcome (reaching a professional academy within three seasons, players aged 12 to 15) and are carried over as a starting assumption.",
+  "The public-data call already reflects part of what these measure (a better player plays more and higher), so adding the effects on top counts some of it twice: read them as an upper bound on what's new.",
+  "With every slider at his age group's average, the simulation returns the public-data call exactly."
+ ]
+}

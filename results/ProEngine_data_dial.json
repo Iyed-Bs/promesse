@@ -1,0 +1,466 @@
+{
+ "model": "penalised logistic, C from T1, train 2014-2020, test 2021-2022; age and position in every variant",
+ "gate": "a channel adds something only if its drop-one 95 % interval is above zero; else not separable from zero here",
+ "everyone under 21": {
+  "n": 8316,
+  "n_players": 6016,
+  "base_rate": 0.1273,
+  "auc_full": 0.7437,
+  "auc_age_position_only": 0.5766,
+  "channels": {
+   "profile": {
+    "inputs": [
+     "height",
+     "left_foot",
+     "birth_quarter"
+    ],
+    "auc_without": 0.7376,
+    "drop_one": {
+     "point": 0.0061,
+     "ci95": [
+      0.0011,
+      0.0112
+     ]
+    },
+    "adds_something": true,
+    "add_one_auc": 0.5886,
+    "add_one_vs_base": {
+     "point": 0.0121,
+     "ci95": [
+      0.0024,
+      0.021
+     ]
+    }
+   },
+   "minutes": {
+    "inputs": [
+     "min_365",
+     "min_730",
+     "qmin_365",
+     "qmin_730",
+     "league_min_365",
+     "europe_min_730",
+     "apps_365",
+     "age_first_app",
+     "qmin_cum",
+     "seasons_senior"
+    ],
+    "auc_without": 0.7435,
+    "drop_one": {
+     "point": 0.0002,
+     "ci95": [
+      -0.0016,
+      0.002
+     ]
+    },
+    "adds_something": false,
+    "add_one_auc": 0.7282,
+    "add_one_vs_base": {
+     "point": 0.1516,
+     "ci95": [
+      0.1333,
+      0.171
+     ]
+    }
+   },
+   "competition level and role": {
+    "inputs": [
+     "last_club_level",
+     "last_share",
+     "last_level",
+     "best_share",
+     "best_level",
+     "clubs_2y"
+    ],
+    "auc_without": 0.7404,
+    "drop_one": {
+     "point": 0.0033,
+     "ci95": [
+      0.0006,
+      0.0063
+     ]
+    },
+    "adds_something": true,
+    "add_one_auc": 0.7256,
+    "add_one_vs_base": {
+     "point": 0.149,
+     "ci95": [
+      0.1296,
+      0.1686
+     ]
+    }
+   },
+   "career shape": {
+    "inputs": [
+     "growth_q",
+     "share_trend",
+     "level_step",
+     "cohort_pct"
+    ],
+    "auc_without": 0.7444,
+    "drop_one": {
+     "point": -0.0007,
+     "ci95": [
+      -0.0017,
+      0.0004
+     ]
+    },
+    "adds_something": false,
+    "add_one_auc": 0.724,
+    "add_one_vs_base": {
+     "point": 0.1475,
+     "ci95": [
+      0.1291,
+      0.1672
+     ]
+    }
+   },
+   "youth international finals": {
+    "inputs": [
+     "yt_selected",
+     "yt_squads",
+     "yt_top_level"
+    ],
+    "auc_without": 0.7366,
+    "drop_one": {
+     "point": 0.0071,
+     "ci95": [
+      0.0015,
+      0.0133
+     ]
+    },
+    "adds_something": true,
+    "add_one_auc": 0.5921,
+    "add_one_vs_base": {
+     "point": 0.0156,
+     "ci95": [
+      0.0065,
+      0.0255
+     ]
+    }
+   },
+   "MatchData minutes": {
+    "inputs": [
+     "fm_min_365",
+     "fm_youth_min_365"
+    ],
+    "auc_without": 0.7437,
+    "drop_one": {
+     "point": 0.0,
+     "ci95": [
+      -0.0002,
+      0.0002
+     ]
+    },
+    "adds_something": false,
+    "add_one_auc": 0.5766,
+    "add_one_vs_base": {
+     "point": 0.0,
+     "ci95": [
+      0.0,
+      0.0001
+     ]
+    }
+   }
+  },
+  "strip": [
+   {
+    "removed": "youth international finals",
+    "auc": 0.7366,
+    "step": {
+     "point": 0.0071,
+     "ci95": [
+      0.0015,
+      0.0133
+     ]
+    }
+   },
+   {
+    "removed": "profile",
+    "auc": 0.7309,
+    "step": {
+     "point": 0.0057,
+     "ci95": [
+      0.0006,
+      0.0108
+     ]
+    }
+   },
+   {
+    "removed": "competition level and role",
+    "auc": 0.7276,
+    "step": {
+     "point": 0.0033,
+     "ci95": [
+      0.0003,
+      0.0067
+     ]
+    }
+   },
+   {
+    "removed": "minutes",
+    "auc": 0.7244,
+    "step": {
+     "point": 0.0032,
+     "ci95": [
+      -0.0006,
+      0.0073
+     ]
+    }
+   },
+   {
+    "removed": "MatchData minutes",
+    "auc": 0.724,
+    "step": {
+     "point": 0.0004,
+     "ci95": [
+      0.0002,
+      0.0005
+     ]
+    }
+   },
+   {
+    "removed": "career shape",
+    "auc": 0.5766,
+    "step": {
+     "point": 0.1475,
+     "ci95": [
+      0.1291,
+      0.1672
+     ]
+    }
+   }
+  ]
+ },
+ "richest records (senior minutes in the last year)": {
+  "n": 1692,
+  "n_players": 1418,
+  "base_rate": 0.3097,
+  "auc_full": 0.7609,
+  "auc_age_position_only": 0.5592,
+  "channels": {
+   "profile": {
+    "inputs": [
+     "height",
+     "left_foot",
+     "birth_quarter"
+    ],
+    "auc_without": 0.7609,
+    "drop_one": {
+     "point": 0.0,
+     "ci95": [
+      -0.0047,
+      0.0047
+     ]
+    },
+    "adds_something": false,
+    "add_one_auc": 0.5614,
+    "add_one_vs_base": {
+     "point": 0.0021,
+     "ci95": [
+      -0.0146,
+      0.0171
+     ]
+    }
+   },
+   "minutes": {
+    "inputs": [
+     "min_365",
+     "min_730",
+     "qmin_365",
+     "qmin_730",
+     "league_min_365",
+     "europe_min_730",
+     "apps_365",
+     "age_first_app",
+     "qmin_cum",
+     "seasons_senior"
+    ],
+    "auc_without": 0.7565,
+    "drop_one": {
+     "point": 0.0044,
+     "ci95": [
+      0.0004,
+      0.0083
+     ]
+    },
+    "adds_something": true,
+    "add_one_auc": 0.7541,
+    "add_one_vs_base": {
+     "point": 0.1949,
+     "ci95": [
+      0.1615,
+      0.2316
+     ]
+    }
+   },
+   "competition level and role": {
+    "inputs": [
+     "last_club_level",
+     "last_share",
+     "last_level",
+     "best_share",
+     "best_level",
+     "clubs_2y"
+    ],
+    "auc_without": 0.7476,
+    "drop_one": {
+     "point": 0.0133,
+     "ci95": [
+      0.0055,
+      0.0212
+     ]
+    },
+    "adds_something": true,
+    "add_one_auc": 0.7564,
+    "add_one_vs_base": {
+     "point": 0.1971,
+     "ci95": [
+      0.1639,
+      0.2351
+     ]
+    }
+   },
+   "career shape": {
+    "inputs": [
+     "growth_q",
+     "share_trend",
+     "level_step",
+     "cohort_pct"
+    ],
+    "auc_without": 0.7641,
+    "drop_one": {
+     "point": -0.0033,
+     "ci95": [
+      -0.0056,
+      -0.0009
+     ]
+    },
+    "adds_something": false,
+    "add_one_auc": 0.7326,
+    "add_one_vs_base": {
+     "point": 0.1734,
+     "ci95": [
+      0.1404,
+      0.2103
+     ]
+    }
+   },
+   "youth international finals": {
+    "inputs": [
+     "yt_selected",
+     "yt_squads",
+     "yt_top_level"
+    ],
+    "auc_without": 0.7645,
+    "drop_one": {
+     "point": -0.0036,
+     "ci95": [
+      -0.0084,
+      0.0016
+     ]
+    },
+    "adds_something": false,
+    "add_one_auc": 0.5653,
+    "add_one_vs_base": {
+     "point": 0.006,
+     "ci95": [
+      -0.0092,
+      0.0225
+     ]
+    }
+   },
+   "MatchData minutes": {
+    "inputs": [
+     "fm_min_365",
+     "fm_youth_min_365"
+    ],
+    "auc_without": 0.7605,
+    "drop_one": {
+     "point": 0.0004,
+     "ci95": [
+      0.0,
+      0.0007
+     ]
+    },
+    "adds_something": false,
+    "add_one_auc": 0.5593,
+    "add_one_vs_base": {
+     "point": 0.0001,
+     "ci95": [
+      -0.0,
+      0.0002
+     ]
+    }
+   }
+  },
+  "strip": [
+   {
+    "removed": "competition level and role",
+    "auc": 0.7476,
+    "step": {
+     "point": 0.0133,
+     "ci95": [
+      0.0055,
+      0.0212
+     ]
+    }
+   },
+   {
+    "removed": "minutes",
+    "auc": 0.7299,
+    "step": {
+     "point": 0.0177,
+     "ci95": [
+      0.0099,
+      0.0249
+     ]
+    }
+   },
+   {
+    "removed": "MatchData minutes",
+    "auc": 0.73,
+    "step": {
+     "point": -0.0001,
+     "ci95": [
+      -0.0002,
+      0.0
+     ]
+    }
+   },
+   {
+    "removed": "profile",
+    "auc": 0.7289,
+    "step": {
+     "point": 0.0011,
+     "ci95": [
+      -0.0037,
+      0.0057
+     ]
+    }
+   },
+   {
+    "removed": "career shape",
+    "auc": 0.5653,
+    "step": {
+     "point": 0.1636,
+     "ci95": [
+      0.1324,
+      0.1998
+     ]
+    }
+   },
+   {
+    "removed": "youth international finals",
+    "auc": 0.5592,
+    "step": {
+     "point": 0.006,
+     "ci95": [
+      -0.0092,
+      0.0225
+     ]
+    }
+   }
+  ]
+ }
+}

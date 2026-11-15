@@ -1,0 +1,238 @@
+{
+ "family_classifier": {
+  "labelled_starts": 366411,
+  "classes": [
+   "AM",
+   "CB",
+   "CM",
+   "DM",
+   "FB",
+   "GK",
+   "ST",
+   "W"
+  ],
+  "accuracy_on_2024_on": 0.871
+ },
+ "player_seasons": 48682,
+ "by_family": {
+  "CB": 10115,
+  "W": 10025,
+  "FB": 6302,
+  "ST": 6288,
+  "CM": 5031,
+  "DM": 4845,
+  "GK": 3952,
+  "AM": 2124
+ },
+ "split_half_spearman": {
+  "GK: Shot-stopper": 0.187,
+  "GK: Sweeper-keeper": 0.754,
+  "CB: Stopper": 0.749,
+  "CB: Ball-player": 0.801,
+  "CB: Cover": 0.619,
+  "FB: Crossing outlet": 0.84,
+  "FB: Inverted": 0.866,
+  "FB: Defensive": 0.676,
+  "DM: Anchor": 0.733,
+  "DM: Deep playmaker": 0.894,
+  "CM: Box-to-box": 0.688,
+  "CM: Mezzala": 0.831,
+  "CM: Organiser": 0.92,
+  "AM: Creator": 0.697,
+  "AM: Second striker": 0.759,
+  "W: Wide winger": 0.917,
+  "W: Inside forward": 0.87,
+  "W: Dribbler": 0.876,
+  "ST: Target": 0.89,
+  "ST: Poacher": 0.743,
+  "ST: Deep-lying forward": 0.802,
+  "ST: Pressing forward": 0.718
+ },
+ "top_role_agreement": {
+  "GK": {
+   "agree": 0.65,
+   "chance": 0.5,
+   "n": 1717
+  },
+  "CB": {
+   "agree": 0.662,
+   "chance": 0.333,
+   "n": 3986
+  },
+  "FB": {
+   "agree": 0.723,
+   "chance": 0.333,
+   "n": 2145
+  },
+  "DM": {
+   "agree": 0.819,
+   "chance": 0.5,
+   "n": 1826
+  },
+  "CM": {
+   "agree": 0.775,
+   "chance": 0.333,
+   "n": 1714
+  },
+  "AM": {
+   "agree": 0.752,
+   "chance": 0.5,
+   "n": 694
+  },
+  "W": {
+   "agree": 0.781,
+   "chance": 0.333,
+   "n": 2935
+  },
+  "ST": {
+   "agree": 0.689,
+   "chance": 0.25,
+   "n": 1691
+  }
+ },
+ "gate_t3": {
+  "rule": "every role's odd/even Spearman >= 0.5 and top-role agreement >= 1.5 x chance (1,800+ minutes)",
+  "passed": false
+ },
+ "roles": {
+  "GK": {
+   "Shot-stopper": {
+    "r_prevented": 1,
+    "r_saves": 0.5
+   },
+   "Sweeper-keeper": {
+    "r_sweeper": 1,
+    "s_passes": 0.7,
+    "r_passes": 0.5,
+    "q_long_share": -0.5
+   }
+  },
+  "CB": {
+   "Stopper": {
+    "r_aerials": 1,
+    "r_clearances": 1,
+    "r_tackles": 0.5,
+    "q_aerial_win": 0.5
+   },
+   "Ball-player": {
+    "s_passes": 1,
+    "r_final_third": 1,
+    "q_long_acc": 0.5,
+    "q_pass_acc": 0.5
+   },
+   "Cover": {
+    "r_interceptions": 1,
+    "r_recoveries": 1,
+    "r_clearances": -0.3
+   }
+  },
+  "FB": {
+   "Crossing outlet": {
+    "r_crosses": 1,
+    "s_crosses": 0.7,
+    "r_final_third": 0.5,
+    "r_box": 0.5
+   },
+   "Inverted": {
+    "s_passes": 1,
+    "q_pass_acc": 0.5,
+    "r_crosses": -0.7,
+    "r_touches": 0.5
+   },
+   "Defensive": {
+    "r_tackles": 1,
+    "r_interceptions": 0.7,
+    "r_duels_won": 0.5,
+    "r_final_third": -0.3
+   }
+  },
+  "DM": {
+   "Anchor": {
+    "r_tackles": 1,
+    "r_interceptions": 1,
+    "r_duels_won": 0.5,
+    "r_recoveries": 0.5
+   },
+   "Deep playmaker": {
+    "s_passes": 1,
+    "r_longs": 0.7,
+    "r_final_third": 0.7,
+    "q_pass_acc": 0.5
+   }
+  },
+  "CM": {
+   "Box-to-box": {
+    "r_box": 0.8,
+    "r_def_actions": 0.8,
+    "r_recoveries": 0.5,
+    "r_shots": 0.4
+   },
+   "Mezzala": {
+    "r_final_third": 0.6,
+    "r_dribbles": 0.7,
+    "r_box": 0.6,
+    "r_chances": 0.5
+   },
+   "Organiser": {
+    "s_passes": 1,
+    "q_pass_acc": 0.8,
+    "r_passes": 0.5
+   }
+  },
+  "AM": {
+   "Creator": {
+    "r_chances": 1,
+    "r_xa": 1,
+    "r_big_chances": 0.5
+   },
+   "Second striker": {
+    "r_shots": 1,
+    "r_xg": 1,
+    "r_box": 0.7
+   }
+  },
+  "W": {
+   "Wide winger": {
+    "r_crosses": 1,
+    "r_final_third": 0.5,
+    "s_crosses": 0.5
+   },
+   "Inside forward": {
+    "r_shots": 1,
+    "r_xg": 0.8,
+    "r_box": 0.6,
+    "r_crosses": -0.4
+   },
+   "Dribbler": {
+    "r_dribbles": 1,
+    "r_fouled": 0.6,
+    "r_drib_succ": 0.5
+   }
+  },
+  "ST": {
+   "Target": {
+    "r_aerials": 1,
+    "r_duels_won": 0.6,
+    "r_touches": 0.4,
+    "q_aerial_win": 0.5
+   },
+   "Poacher": {
+    "q_xg_per_touch": 1,
+    "s_box": 0.8,
+    "r_shots": 0.5,
+    "r_touches": -0.5
+   },
+   "Deep-lying forward": {
+    "r_chances": 0.8,
+    "r_touches": 0.7,
+    "r_final_third": 0.5,
+    "r_box": -0.3
+   },
+   "Pressing forward": {
+    "r_def_actions": 1,
+    "r_recoveries": 0.8,
+    "r_tackles": 0.5
+   }
+  }
+ }
+}
